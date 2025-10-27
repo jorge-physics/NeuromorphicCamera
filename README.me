@@ -1,0 +1,25 @@
+# Neuromorphic / Event Camera Demo
+
+This repo shows:
+1. A real-time "event camera" style view using a normal webcam (`event_camera_live.py`).
+## 1. Live Webcam Demo (Python)
+
+`webCamCapturewNeuro4TikTokv2.py` opens a webcam and renders:
+- Top panel: standard frame-based camera feed.
+- Bottom panel: event-style feed. Pixels flash when brightness changes.
+
+### Controls
+- `s` toggles label style (`STANDARD CAMERA / EVENT CAMERA` vs `FRAME-BASED / EVENT-BASED`)
+- `l` shows/hides labels
+- `q` quits
+
+### Run it
+```bash
+python -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
+pip install -r requirements.txt
+python event_camera_live.py
+
+## this is the stuff i ran in miniconda
+conda install -c conda-forge --strict-channel-priority spyder=5.5 numpy scipy matplotlib pandas jupyterlab
+conda install -c conda-forge --strict-channel-priority opencv
